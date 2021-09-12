@@ -8,6 +8,7 @@
 :root {
 	--blue: rgb(73, 105, 220);
 	--blue-2: rgb(55, 80, 167);
+	--orange: rgb(225, 102, 71);
 	--dark: #1c1c2c;
 	--dark2: #545464;
 	--light: #ededf5;
@@ -34,7 +35,7 @@ body {
 .container {
 	background: var(--light);
 	border-radius: 15px;
-	min-width: 400px;
+	width: 40ch;
 	min-height: 500px;
 	padding: 20px 40px;
 	overflow: hidden;
@@ -47,6 +48,23 @@ header {
 header h2 {
 	margin: 10px 0 5px;
 }
+header h2 .zoyo {
+	font-size: 1.2em;
+	transition: rotate 200ms ease;
+}
+header h2 small {
+	font-size: 16px;
+	font-weight: 100;
+}
+header h2 .blue {
+	color: var(--blue);
+}
+header h2 .orange {
+	color: var(--orange);
+}
+header h2 .qr i {
+	font-size: 12px;
+}
 header p {
 	margin: 0;
 	padding: 5px 0 10px;
@@ -58,6 +76,7 @@ header p {
 	width: 100%;
 	margin-top: 20px;
 	padding: 10px 30px;
+	position: relative;
 	box-shadow: var(--drop-dark);
 	border-radius: 5px;
 }
@@ -74,7 +93,7 @@ header p {
 }
 
 .departure .route {
-	font-size: 0.9em;
+	font-size: 0.8em;
 	color: var(--dark);
 }
 .departure .route i {
@@ -112,6 +131,14 @@ header p {
 	padding-left: 5px;
 	color: var(--blue);
 }
+.barcode {
+	position: absolute;
+	top: 25px;
+	right: 0;
+}
+.barcode i {
+	font-size: 25px;
+}
 
 .ticket-details {
 	margin-top: 30px;
@@ -133,12 +160,34 @@ header p {
 .ticket-details h3:hover,
 .ticket-details p:hover {
 	color: var(--dark);
-	cursor: crosshair;
+	cursor: default;
 }
 
 .checkout {
+	background: rgb(248, 248, 248, 0.5);
+	border-radius: 15px;
+	box-shadow: var(--drop-dark);
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	margin: 20px 0;
+}
+
+.btn-checkout {
+	background: var(--blue);
+	color: white;
+	border: none;
+	display: block;
+	width: 100%;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 15px 0 10px;
+	transition: box-shadow 0.2s ease-in-out;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+.btn-checkout:hover {
+	box-shadow: 0 3px 20px rgba(0, 0, 250, 0.5);
+}
+.btn-checkout:focus {
+	outline: none;
 }

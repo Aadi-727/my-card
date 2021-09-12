@@ -17,18 +17,26 @@
 	<body>
 		<div class="container">
 			<header>
-				<h2>Zoyo Travels</h2>
+				<h2>
+					<span class="zoyo">
+						<span class="orange">Z</span><span class="blue">o</span
+						><span class="orange">y</span><span class="blue">o</span>
+					</span>
+					Travels <small>&trade;</small>
+					<span class="qr"><i class="fas fa-qrcode"></i></span>
+				</h2>
 				<p>We will take you to mars</p>
 			</header>
 			<!-- Departure -->
 			<div class="departure">
+				<div class="barcode"><i class="fas fa-barcode"></i></div>
+
 				<p class="special">
 					DEPARTURE <span><i class="fas fa-plane-departure"></i></span>
 				</p>
 				<h3 class="route">
 					Trivandrum <i class="fas fa-angle-double-right"></i>
-					<span>Mumbai CSMT</span> <i class="fas fa-angle-double-right"></i> New
-					Delhi
+					<span>CSMT</span> <i class="fas fa-angle-double-right"></i> New Delhi
 				</h3>
 				<!-- Date and time  -->
 				<div class="date">
@@ -53,10 +61,17 @@
 				<p>1 x Seat Reservation</p>
 			</div>
 			<div class="checkout">
-				<p>Total Price</p>
-				<h3><i class="fas fa-rupee-sign"></i> 7500</h3>
+				<p>Total Price:</p>
+				<h3><i class="fas fa-rupee-sign"></i> <span data-money>7500</span></h3>
 			</div>
 			<button class="btn-checkout">Got to order</button>
 		</div>
+
+		<!-- Script -->
+		<script>
+			const money = document.querySelector("[data-money]");
+			const fMoney = parseFloat(money.textContent).toLocaleString("en-IN");
+			money.innerHTML = fMoney;
+		</script>
 	</body>
 </html>
