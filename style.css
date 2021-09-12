@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,100&display=swap");
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+:root {
+	--blue: rgb(73, 105, 220);
+	--blue-2: rgb(55, 80, 167);
+	--dark: #1c1c2c;
+	--dark2: #545464;
+	--light: #ededf5;
+	--gray: #6c6875;
+	--gray2: #8c8c96;
+	--gray3: #8a8494;
+	--drop-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+	--drop-dark: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+body {
+	background: var(--dark);
+	display: flex;
+	font-family: "Poppins", sans-serif;
+	line-height: 1.7;
+	font-size: 15px;
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.container {
+	background: var(--light);
+	border-radius: 15px;
+	min-width: 400px;
+	min-height: 500px;
+	padding: 20px 40px;
+	overflow: hidden;
+	box-shadow: var(--drop-shadow);
+}
+
+header {
+	text-align: center;
+}
+header h2 {
+	margin: 10px 0 5px;
+}
+header p {
+	margin: 0;
+	padding: 5px 0 10px;
+	font-size: 14px;
+	font-weight: 100;
+}
+.departure {
+	background: var(--light);
+	width: 100%;
+	margin-top: 20px;
+	padding: 10px 30px;
+	box-shadow: var(--drop-dark);
+	border-radius: 5px;
+}
+.departure .special {
+	/* background-color: #000; */
+	font-weight: 300;
+	letter-spacing: 3px;
+	transition: border 50ms ease-in;
+}
+.departure .special span {
+	margin-left: 5px;
+	font-size: 0.8em;
+	color: var(--blue);
+}
+
+.departure .route {
+	font-size: 0.9em;
+	color: var(--dark);
+}
+.departure .route i {
+	padding: 0 5px;
+	color: var(--blue);
+}
+
+.departure .route span {
+	color: var(--blue-2);
+	font-weight: 300;
+}
+
+.departure .date {
+	display: flex;
+	justify-content: space-between;
+	max-width: 270px;
+}
+
+.departure .date p i {
+	padding-right: 5px;
+	color: var(--gray);
+	font-size: 14px;
+}
+.departure .date p {
+	margin-top: 0;
+}
+.departure .flight-name {
+	font-weight: 300;
+	font-size: 0.9em;
+	letter-spacing: 2px;
+	margin: 5px 0 13px;
+	text-align: center;
+}
+.departure .flight-name i {
+	padding-left: 5px;
+	color: var(--blue);
+}
+
+.ticket-details {
+	margin-top: 30px;
+	padding-left: inherit;
+	line-height: 1.2;
+	font-size: 0.9em;
+}
+.ticket-details h3 {
+	display: inline-block;
+	color: var(--gray);
+	transition: color 150ms ease, scale 30ms ease;
+}
+.ticket-details p {
+	color: var(--gray2);
+	font-size: 0.8em;
+	margin-top: 10px;
+	transform-origin: center;
+}
+.ticket-details h3:hover,
+.ticket-details p:hover {
+	color: var(--dark);
+	cursor: crosshair;
+}
+
+.checkout {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 20px 0;
+}
